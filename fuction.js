@@ -3,6 +3,7 @@ function fulle() {
         batterylevel ++
     } 
     batterycolor()
+    batterytext()
 }
 
 function bosalt() {
@@ -10,6 +11,7 @@ function bosalt() {
         batterylevel --
     } 
     batterycolor()
+    batterytext()
 }
 
 function batterycolor() {
@@ -41,4 +43,16 @@ function batterycolor() {
    
     
    }
+}
+function batterytext() {
+    if(batterylevel===0 ){
+        show.innerHTML="batarya: % 0"
+    } else if(batterylevel===1 ){
+        show.innerHTML="batarya: % 33"
+    }  else if(batterylevel===2 ){
+        show.innerHTML="batarya: % 66"
+    } else if(batterylevel===3 ){
+        show.innerHTML="batarya: % 100"
+    }
+    
 }
